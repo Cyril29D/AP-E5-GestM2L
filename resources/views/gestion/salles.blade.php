@@ -18,7 +18,7 @@
   <div class="line text-center">
 
   <div class="s-12 m-12 l-10 margin-bottom-30 ">
-  <a class="button button-black-stroke text-size-20 margin-bottom-30 " href="salle/create">Ajouter une nouvelle salle</a>
+  <a class="button button-black-stroke text-size-20 margin-bottom-30 " href="{{route('salle.create')}}">Ajouter une nouvelle salle</a>
   </div>
 
             <div class="margin">

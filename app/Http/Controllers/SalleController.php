@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\salle;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class SalleController extends Controller
 {
@@ -27,7 +28,7 @@ class SalleController extends Controller
      */
     public function create()
     {
-        return view('ajout_salle');
+        return view('gestion.ajout_salle');
     }
 
     /**
@@ -51,6 +52,9 @@ class SalleController extends Controller
         $salle->equipements = $request->input('equipements');
         $salle->services = $request->input('services');
         $salle->batiment = $request->input('batiment');
+        Log::alert("ici");
+
+
         $salle->save();
         //affichage de la vue qui liste les inscrits
         return redirect('/salle');

@@ -1,4 +1,4 @@
-@extends('layout.modele_pages')
+@extends('layout.modele_pages_gest')
 
 @section('content')
 
