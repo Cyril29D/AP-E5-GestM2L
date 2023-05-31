@@ -1,16 +1,20 @@
 @extends('layout.modele_pages_gest')
 
 @section('content')
-
+<article>
+  <header class="section background-primary">
+    <div class="line">
+      <h1 class="text-white margin-top-bottom-40 text-size-60 text-line-height-1">Ajoutez une nouvelle salle</h1>
+      
+    </div>
+  </header>
 <div class="post">
 
-<div style="text-align:center;padding-top:50px">
-  <center>  <h1>Ajoutez une nouvelle salle</h1><br> </center>
-  </div>
-    <from name="nouvelle_salle" method="post" action="{{route('salle.store')}}">
+
+    <form name="nouvelle_salle" method="post" action="{{route('salle.store')}}">
         {{csrf_field()}}
 
-        <div style="text-align:center;padding-top:50px">
+
 
         <label for="numeroSalle"> Numero de Salle : </label>
         <input name="numeroSalle" type="text"></input>
@@ -41,7 +45,7 @@
 
 </div>
 
-</from>
+</form>
 
 </div>
 @endsection

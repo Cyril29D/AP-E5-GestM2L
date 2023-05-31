@@ -39,7 +39,7 @@ class SalleController extends Controller
      */
     public function store(Request $request)
     {
-        //les numéros emprunteur, nom et prénom doivent être renseignés
+        //le numéro de la salle et le nom  doivent être renseignés
         $this->validate($request, ['numeroSalle' => 'required']);
         $this->validate($request, ['nom' => 'required']);
 
@@ -52,7 +52,7 @@ class SalleController extends Controller
         $salle->equipements = $request->input('equipements');
         $salle->services = $request->input('services');
         $salle->batiment = $request->input('batiment');
-        Log::alert("ici");
+        
 
 
         $salle->save();
